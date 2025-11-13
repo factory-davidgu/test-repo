@@ -148,10 +148,13 @@ jobs:
 ### Test Local Access
 
 ```bash
-# Verify environment variable
+# Quick verification
 echo ${FACTORY_API_KEY:+FACTORY_API_KEY is set} ${FACTORY_API_KEY:-FACTORY_API_KEY is NOT set}
 
-# Test Droid CLI
+# Or use the provided test script
+./.github/test-factory-api-key.sh
+
+# Manual test with Droid CLI
 droid exec "echo test" 2>&1 | grep -i "authentication\|api key" || echo "Key appears valid"
 ```
 
