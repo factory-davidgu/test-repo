@@ -8,6 +8,7 @@ on:
 jobs:
   summarize-changes:
     runs-on: ubuntu-latest
+    environment: droid
     
     steps:
       - name: Checkout repository
