@@ -22,6 +22,8 @@ To enable this automation, you need to configure the `FACTORY_API_KEY` secret:
 4. Value: Your Factory AI API key (obtain from [app.factory.ai](https://app.factory.ai))
 5. Click **Add secret**
 
+> 📘 **Note**: For detailed information about secret management, including access from GitHub Copilot custom agents, Codespaces, and local development, see [Secret Management Guide](.github/SECRET_MANAGEMENT.md)
+
 ### Viewing Summaries
 
 After each merge to `main`, you can view the change summary in:
