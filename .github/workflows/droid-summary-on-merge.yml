@@ -1,0 +1,35 @@
+name: Droid Summary on Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  summarize-changes:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history to analyze recent changes
+      
+      - name: Install Droid CLI
+        run: |
+          curl -fsSL https://app.factory.ai/cli | sh
+          echo "/usr/local/bin" >> $GITHUB_PATH
+      
+      - name: Verify Droid CLI installation
+        run: |
+          droid --version
+      
+      - name: Run Droid exec to summarize recent changes
+        env:
+          FACTORY_API_KEY: ${{ secrets.FACTORY_API_KEY }}
+        run: |
+          droid exec "Analyze the recent changes in this repository from the last merge to main. Provide a concise summary including: 1) What files were changed, 2) The main purpose of the changes, 3) Any potential impacts or considerations. Focus on the most recent commit(s)."
+      
+      - name: Display summary completion
+        run: |
+          echo "✅ Droid summary completed successfully"
