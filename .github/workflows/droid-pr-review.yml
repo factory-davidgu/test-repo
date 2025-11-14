@@ -28,8 +28,8 @@ jobs:
         env:
           FACTORY_API_KEY: ${{ secrets.FACTORY_API_KEY }}
         run: |
-          droid exec "Review this pull request for code quality, security issues, and best practices. Analyze the changes in PR #${{ github.event.pull_request.number }} and provide specific feedback including: 1) Code quality assessment, 2) Potential bugs or issues, 3) Security considerations, 4) Suggestions for improvement, 5) Best practices alignment. Focus on the files changed in this PR."
+          droid exec "Review this pull request for code quality, security issues, and best practices. Analyze the changes in ${{ github.event.pull_request.html_url }} and provide specific feedback including: 1) Code quality assessment, 2) Potential bugs or issues, 3) Security considerations, 4) Suggestions for improvement, 5) Best practices alignment. Focus on the files changed in this PR."
       
       - name: Display review completion
         run: |
-          echo "✅ Droid PR review completed successfully for PR #${{ github.event.pull_request.number }}"
+          echo "✅ Droid PR review completed successfully for ${{ github.event.pull_request.html_url }}"
