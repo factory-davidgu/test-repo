@@ -1,0 +1,45 @@
+
+    ╔═══════════════════════════════════════════╗
+    ║                                           ║
+    ║         DROID CLI ASCII ART               ║
+    ║                                           ║
+    ╚═══════════════════════════════════════════╝
+
+          ___
+         /   \
+        | O O |
+        |  ^  |        ____  ____   ___  ___ ____  
+        | \_/ |       |  _ \|  _ \ / _ \|_ _|  _ \ 
+        |_____|       | | | | |_) | | | || || | | |
+      __|     |__     | |_| |  _ <| |_| || || |_| |
+     /  |     |  \    |____/|_| \_\\___/|___|____/ 
+    |   |_____|   |
+    |   /     \   |   Automating code review & development
+    |  /       \  |   with AI-powered workflows!
+    | |         | |
+    |_|         |_|
+     ||         ||
+     ||         ||
+    |__|       |__|
+
+
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░                                          ░
+    ░   Features:                             ░
+    ░   • Automated PR Reviews                ░
+    ░   • Code Quality Analysis               ░
+    ░   • Security Vulnerability Detection    ░
+    ░   • CI/CD Integration                   ░
+    ░   • Change Summarization                ░
+    ░                                          ░
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+
+         [===================]
+         [  POWERED BY AI  🤖 ]
+         [===================]
+
+    Created with: droid exec --auto low
+    Repository: factory-davidgu/test-repo
+    Date: 2025-11-14
+
