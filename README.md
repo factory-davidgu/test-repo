@@ -12,6 +12,7 @@ droid-mcp is an MCP server that exposes Droid agent capabilities through the sta
 
 1. **`simple-droid-mcp-example.js`** - A conceptual demonstration showing the structure of calling droidExec
 2. **`droid-mcp-example.js`** - A full implementation example using the MCP SDK (requires MCP client setup)
+3. **`advanced-droid-mcp-examples.js`** - Collection of various use cases including the "meaning of life" prompt
 
 ### Quick Start
 
@@ -23,6 +24,12 @@ npm run simple-example
 ```
 
 This demonstrates calling droidExec with the prompt: **"What is the meaning of life?"**
+
+View all advanced examples including different use cases:
+
+```bash
+npm run advanced-examples
+```
 
 ### Example Tool Call Structure
 

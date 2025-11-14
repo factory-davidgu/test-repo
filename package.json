@@ -5,7 +5,8 @@
   "main": "droid-mcp-example.js",
   "scripts": {
     "example": "node droid-mcp-example.js",
-    "simple-example": "node simple-droid-mcp-example.js"
+    "simple-example": "node simple-droid-mcp-example.js",
+    "advanced-examples": "node advanced-droid-mcp-examples.js"
   },
   "keywords": [
     "droid",
