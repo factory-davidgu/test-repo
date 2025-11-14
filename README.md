@@ -1,16 +1,36 @@
 # test-repo
 
-## Automated Change Summaries with Droid CLI
+## Automated Code Review and Change Summaries with Droid CLI
 
-This repository includes a GitHub Action that automatically runs when branches are merged to the `main` branch. The action uses the [Droid CLI](https://docs.factory.ai) to analyze and summarize recent changes.
+This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
+
+1. **PR Review** - Automatically reviews every new pull request
+2. **Merge Summary** - Summarizes changes when merged to `main`
+
+### PR Review Automation
+
+When a pull request is opened or updated, the workflow automatically:
+1. Checks out the repository with full history
+2. Installs the Droid CLI
+3. Executes `droid exec` to perform a comprehensive code review
+4. Analyzes code quality, security issues, and best practices
+5. Displays the review in the GitHub Actions log
+
+### Change Summary on Merge
+
+This repository also includes a GitHub Action that automatically runs when branches are merged to the `main` branch. The action uses the [Droid CLI](https://docs.factory.ai) to analyze and summarize recent changes.
 
 ### How It Works
 
-When a pull request is merged to `main`, the workflow:
-1. Checks out the repository with full history
-2. Installs the Droid CLI
-3. Executes `droid exec` to generate a summary of the changes
-4. Displays the summary in the GitHub Actions log
+**PR Review Workflow** (`.github/workflows/droid-pr-review.yml`):
+- Triggers on: Pull request opened or synchronized
+- Reviews: Code quality, security, best practices
+- Output: Detailed review in GitHub Actions log
+
+**Merge Summary Workflow** (`.github/workflows/droid-summary-on-merge.yml`):
+- Triggers on: Push to `main` branch
+- Analyzes: Recent changes and their impact
+- Output: Summary in GitHub Actions log
 
 ### Setup Instructions
 
@@ -22,18 +42,35 @@ To enable this automation, you need to configure the `FACTORY_API_KEY` secret:
 4. Value: Your Factory AI API key (obtain from [app.factory.ai](https://app.factory.ai))
 5. Click **Add secret**
 
-### Viewing Summaries
+### Viewing Results
 
-After each merge to `main`, you can view the change summary in:
-- **Actions** tab > Select the workflow run > View the "Run Droid exec to summarize recent changes" step
+**PR Reviews:**
+- Navigate to **Pull Requests** > Select a PR
+- Click **Actions** tab or **Checks** section
+- View the "Run Droid exec to review PR" step in the workflow
+
+**Merge Summaries:**
+- Navigate to **Actions** tab > Select the workflow run
+- View the "Run Droid exec to summarize recent changes" step
 
 ### Workflow Details
 
-The workflow is defined in `.github/workflows/droid-summary-on-merge.yml` and can be customized to:
+Both workflows can be customized to:
 - Change the analysis prompt
 - Adjust autonomy levels with `--auto` flags
 - Enable different tools or models
 - Add additional automation steps
+
+The PR review workflow (`.github/workflows/droid-pr-review.yml`) focuses on:
+- Code quality assessment
+- Security vulnerability detection
+- Best practices validation
+- Specific improvement suggestions
+
+The merge summary workflow (`.github/workflows/droid-summary-on-merge.yml`) focuses on:
+- Understanding what changed
+- Impact assessment
+- Change documentation
 
 For more information about `droid exec` capabilities, see the [Droid CLI documentation](https://docs.factory.ai).
 
