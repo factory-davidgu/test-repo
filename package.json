@@ -1,0 +1,18 @@
+{
+  "name": "tiny-todo-cli",
+  "version": "1.0.0",
+  "description": "A tiny CLI app to manage todos",
+  "main": "todo.js",
+  "bin": {
+    "todo": "./todo.js"
+  },
+  "scripts": {
+    "test": "node todo.js list"
+  },
+  "keywords": ["cli", "todo", "task", "productivity"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
