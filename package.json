@@ -1,0 +1,20 @@
+{
+  "name": "test-repo-droid-mcp-example",
+  "version": "1.0.0",
+  "description": "Example of using droid-mcp to call droidExec",
+  "main": "droid-mcp-example.js",
+  "scripts": {
+    "example": "node droid-mcp-example.js",
+    "simple-example": "node simple-droid-mcp-example.js"
+  },
+  "keywords": [
+    "droid",
+    "mcp",
+    "droid-mcp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0"
+  }
+}
