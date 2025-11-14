@@ -1,5 +1,5 @@
 ---
-name: droid
+name: droid-cli
 description: Provides installation guidance, usage examples, and automation patterns for the Droid CLI, with emphasis on droid exec for CI/CD and non-interactive automation
 tools: ['read', 'edit', 'search', 'shell']
 ---
