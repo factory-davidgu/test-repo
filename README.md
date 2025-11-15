@@ -1,5 +1,9 @@
 # test-repo
 
+## Available Tools
+
+For a comprehensive list of all tools and capabilities available when working with this repository, see [AVAILABLE_TOOLS.md](AVAILABLE_TOOLS.md).
+
 ## Automated Code Review and Change Summaries with Droid CLI
 
 This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
