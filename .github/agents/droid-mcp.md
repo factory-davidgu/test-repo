@@ -9,7 +9,7 @@ mcp-servers:
     command: 'npx'
     args: ['-y', 'github:factory-davidgu/droid-mcp']
     env:
-      FACTORY_API_KEY: FACTORY_API_KEY
+      FACTORY_API_KEY: COPILOT_MCP_FACTORY_API_KEY
 ---
 
 # Droid MCP Documentation
