@@ -1,5 +1,78 @@
 # test-repo
 
+## CLI Todo Management Application
+
+This repository now includes a simple CLI-based todo management application built with Node.js.
+
+### Installation
+
+```bash
+# Install globally (optional)
+npm install -g .
+
+# Or use it directly with node
+node todo.js <command>
+```
+
+### Usage
+
+The todo CLI provides the following commands:
+
+```bash
+# Add a new task
+todo add "Buy groceries"
+
+# List all tasks
+todo list
+
+# Mark a task as complete
+todo complete 1
+
+# Delete a task
+todo delete 2
+
+# Show help
+todo help
+```
+
+### Features
+
+- ✅ Add new tasks with descriptions
+- ✅ List all tasks with completion status
+- ✅ Mark tasks as complete
+- ✅ Delete tasks
+- ✅ Persistent storage using JSON file (~/.todos.json)
+- ✅ Visual indicators (✓ for complete, ○ for incomplete)
+- ✅ Task counter showing progress
+
+### Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+### Examples
+
+```bash
+# Add some tasks
+todo add "Learn Node.js"
+todo add "Build a CLI app"
+todo add "Deploy to production"
+
+# View your tasks
+todo list
+
+# Complete the first task
+todo complete 1
+
+# Delete a task you don't need
+todo delete 3
+```
+
+---
+
 ## Automated Code Review and Change Summaries with Droid CLI
 
 This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
