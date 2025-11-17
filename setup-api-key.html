@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORY_API_KEY Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 3rem 2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .section p, .section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .section ol {
+            margin-left: 3rem;
+        }
+        
+        .section li {
+            margin-bottom: 1.5rem;
+        }
+        
+        .code-box {
+            background: #f5f7fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-box code {
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box strong {
+            color: #1976d2;
+        }
+        
+        .screenshot-placeholder {
+            background: #f5f7fa;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            margin: 1.5rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #764ba2;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .section ol {
+                margin-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔑 FACTORY_API_KEY Setup Guide</h1>
+            <p>Complete setup instructions for GitHub Actions integration</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2><span class="step-number">1</span>Obtain Your API Key</h2>
+                <p>First, you need to get your Factory AI API key from the Factory AI platform:</p>
+                <ol>
+                    <li>
+                        <strong>Visit Factory AI:</strong> Navigate to <a href="https://app.factory.ai" target="_blank" style="color: #667eea;">app.factory.ai</a>
+                    </li>
+                    <li>
+                        <strong>Sign in or Create Account:</strong> Log in to your Factory AI account. If you don't have one, you'll need to create an account first.
+                    </li>
+                    <li>
+                        <strong>Access API Settings:</strong> Once logged in, go to your account settings or API settings page to find your API key.
+                    </li>
+                    <li>
+                        <strong>Generate or Copy Key:</strong> Generate a new API key if needed, or copy your existing API key. Keep this key secure!
+                    </li>
+                </ol>
+                
+                <div class="info-box">
+                    <strong>🔒 Security Note:</strong> Your API key is like a password. Never share it publicly or commit it to your code. Always store it as a GitHub secret.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="step-number">2</span>Add Key to GitHub Repository</h2>
+                <p>Now that you have your API key, you need to add it to your GitHub repository as a secret:</p>
+                <ol>
+                    <li>
+                        <strong>Navigate to Repository Settings:</strong>
+                        <br>Go to your GitHub repository and click on the <strong>Settings</strong> tab at the top of the page.
+                    </li>
+                    <li>
+                        <strong>Access Secrets and Variables:</strong>
+                        <br>In the left sidebar, find the <strong>Security</strong> section and click on <strong>Secrets and variables</strong>, then click on <strong>Actions</strong>.
+                    </li>
+                    <li>
+                        <strong>Create New Secret:</strong>
+                        <br>Click the <strong>New repository secret</strong> button (green button in the top right).
+                    </li>
+                    <li>
+                        <strong>Enter Secret Details:</strong>
+                        <br>In the form that appears:
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li><strong>Name:</strong> Enter exactly <code style="background: #f5f7fa; padding: 0.2rem 0.5rem; border-radius: 3px;">FACTORY_API_KEY</code></li>
+                            <li><strong>Secret:</strong> Paste your Factory AI API key that you copied in Step 1</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Save the Secret:</strong>
+                        <br>Click the <strong>Add secret</strong> button to save. Your API key is now securely stored!
+                    </li>
+                </ol>
+                
+                <div class="code-box">
+                    <code>Secret Name: FACTORY_API_KEY<br>
+Secret Value: [Your API key from app.factory.ai]</code>
+                </div>
+                
+                <div class="info-box">
+                    <strong>✅ Important:</strong> The secret name must be exactly <code style="background: white; padding: 0.2rem 0.5rem; border-radius: 3px;">FACTORY_API_KEY</code> (all uppercase) for the GitHub Actions workflows to work properly.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="step-number">3</span>Verify Setup</h2>
+                <p>After adding the secret, your GitHub Actions workflows will automatically use it. To verify:</p>
+                <ol>
+                    <li>Create a new pull request or push changes to trigger the workflows</li>
+                    <li>Navigate to the <strong>Actions</strong> tab in your repository</li>
+                    <li>Check that the Droid CLI workflows run successfully without authentication errors</li>
+                    <li>If you see errors about missing API keys, double-check that the secret name matches exactly</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>📚 Additional Resources</h2>
+                <p>For more information about using the Droid CLI:</p>
+                <ul style="list-style-type: none; margin-left: 0;">
+                    <li style="margin-bottom: 0.5rem;">📖 <a href="https://docs.factory.ai" target="_blank" style="color: #667eea;">Droid CLI Documentation</a></li>
+                    <li style="margin-bottom: 0.5rem;">🔐 <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets" target="_blank" style="color: #667eea;">GitHub Encrypted Secrets Guide</a></li>
+                    <li style="margin-bottom: 0.5rem;">🤖 <a href="https://app.factory.ai" target="_blank" style="color: #667eea;">Factory AI Platform</a></li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0f0f0;">
+                <a href="index.html" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
