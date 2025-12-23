@@ -1,5 +1,61 @@
 # test-repo
 
+## Droid MCP Integration Example
+
+This repository includes examples of how to use **droid-mcp** to call the `droidExec` tool programmatically through the Model Context Protocol (MCP).
+
+### What is droid-mcp?
+
+droid-mcp is an MCP server that exposes Droid agent capabilities through the standardized MCP interface. It allows MCP-compatible applications (like Claude Desktop, IDEs, or custom AI agents) to programmatically request Droid to analyze code, implement features, fix bugs, and answer questions about codebases.
+
+### Example Files
+
+1. **`simple-droid-mcp-example.js`** - A conceptual demonstration showing the structure of calling droidExec
+2. **`droid-mcp-example.js`** - A full implementation example using the MCP SDK (requires MCP client setup)
+3. **`advanced-droid-mcp-examples.js`** - Collection of various use cases including the "meaning of life" prompt
+
+### Quick Start
+
+Run the simple conceptual example:
+
+```bash
+npm install
+npm run simple-example
+```
+
+This demonstrates calling droidExec with the prompt: **"What is the meaning of life?"**
+
+View all advanced examples including different use cases:
+
+```bash
+npm run advanced-examples
+```
+
+### Example Tool Call Structure
+
+```javascript
+{
+  name: 'droidExec',
+  arguments: {
+    prompt: 'What is the meaning of life?',
+    model: 'claude-sonnet-4-5-20250929',  // Optional
+    cwd: '/path/to/project'                 // Optional
+  }
+}
+```
+
+### Using droid-mcp in Practice
+
+1. **Set up an MCP client** (e.g., Claude Desktop, custom application)
+2. **Configure droid-mcp server** in your MCP client settings
+3. **Set environment variable**: `FACTORY_API_KEY` with your Factory AI API key
+4. **Call droidExec tool** with your prompt
+5. **Process the response** from Droid
+
+For more details, see the [droid-mcp documentation](https://docs.factory.ai).
+
+---
+
 ## Automated Code Review and Change Summaries with Droid CLI
 
 This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
