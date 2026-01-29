@@ -1,0 +1,17 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "description": "Landing page with WebGL shader and automated Droid CLI code review",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .html,.js . && htmlhint *.html",
+    "lint:js": "eslint --ext .html,.js .",
+    "lint:html": "htmlhint *.html",
+    "lint:fix": "eslint --ext .html,.js . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-html": "^8.0.0",
+    "htmlhint": "^1.1.4"
+  }
+}
