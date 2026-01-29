@@ -1,0 +1,13 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "description": "Landing page with WebGL shader",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "serve": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
