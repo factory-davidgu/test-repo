@@ -1,0 +1,21 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "description": "Landing page with WebGL shader",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "globals": "^15.0.0"
+  },
+  "keywords": [
+    "webgl",
+    "shader",
+    "landing-page"
+  ],
+  "license": "MIT"
+}
