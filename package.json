@@ -1,0 +1,16 @@
+{
+  "name": "test-repo",
+  "version": "1.0.0",
+  "description": "Landing page with WebGL shader and automated code review",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-plugin-html": "^8.0.0"
+  },
+  "keywords": ["webgl", "shader", "landing-page"],
+  "license": "MIT"
+}
