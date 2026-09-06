@@ -1,0 +1,119 @@
+:root {
+  --bg-gradient-start: #1f1c2c;
+  --bg-gradient-end: #928dab;
+  --calc-bg: #1c1c1ecc;
+  --display-color: #ffffff;
+  --digit-bg: #3a3a3c;
+  --digit-bg-hover: #4a4a4c;
+  --function-bg: #a5a5a5;
+  --function-color: #1c1c1e;
+  --function-bg-hover: #bdbdbd;
+  --operator-bg: #ff9f0a;
+  --operator-bg-hover: #ffb340;
+  --btn-size: 78px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: radial-gradient(circle at top left, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
+.calculator {
+  width: 340px;
+  padding: 24px;
+  border-radius: 28px;
+  background: var(--calc-bg);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.display {
+  text-align: right;
+  padding: 20px 12px 10px;
+  color: var(--display-color);
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  word-break: break-all;
+}
+
+.display-expression {
+  font-size: 20px;
+  opacity: 0.6;
+  min-height: 24px;
+}
+
+.display-result {
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, var(--btn-size));
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--display-color);
+  background: var(--digit-bg);
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  background: var(--digit-bg-hover);
+}
+
+.btn:active {
+  transform: scale(0.94);
+  filter: brightness(1.15);
+}
+
+.btn.function {
+  background: var(--function-bg);
+  color: var(--function-color);
+}
+
+.btn.function:hover {
+  background: var(--function-bg-hover);
+}
+
+.btn.operator {
+  background: var(--operator-bg);
+  font-weight: 500;
+}
+
+.btn.operator:hover {
+  background: var(--operator-bg-hover);
+}
+
+.btn.zero {
+  width: calc(var(--btn-size) * 2 + 12px);
+  border-radius: 40px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.btn.operator.equals {
+  background: var(--operator-bg);
+}
