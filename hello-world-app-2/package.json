@@ -1,0 +1,9 @@
+{
+  "name": "hello-world-app-2",
+  "version": "1.0.0",
+  "description": "A second minimal hello world app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
