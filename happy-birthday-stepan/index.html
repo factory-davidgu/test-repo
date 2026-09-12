@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Stepan! 🎉</title>
+<style>
+  :root {
+    --pink: #ff6b9d;
+    --purple: #c06fdb;
+    --yellow: #ffd93d;
+    --blue: #6bc7ff;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2b1055, #7597de);
+    background-size: 400% 400%;
+    animation: bgShift 12s ease infinite;
+    min-height: 100vh;
+  }
+  @keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+    z-index: 2;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 8vw, 5rem);
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255,255,255,0.6), 0 4px 10px rgba(0,0,0,0.4);
+    animation: pop 1.2s ease-out;
+  }
+  @keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  .name {
+    background: linear-gradient(90deg, var(--pink), var(--yellow), var(--blue), var(--purple));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 4s linear infinite;
+  }
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+  }
+  p.subtitle {
+    color: #f0e6ff;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    margin-top: 10px;
+    opacity: 0.9;
+  }
+  .cake {
+    font-size: clamp(4rem, 15vw, 8rem);
+    margin: 30px 0;
+    cursor: pointer;
+    user-select: none;
+    animation: bounce 2s ease-in-out infinite;
+    transition: transform 0.15s ease;
+  }
+  .cake:active { transform: scale(0.9); }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  .hint {
+    color: #d8cfff;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-top: -10px;
+  }
+  .balloons {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: 75px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.9;
+  }
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.5);
+  }
+  @keyframes rise {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(-55vh) translateX(30px) rotate(8deg); }
+    100% { transform: translateY(-115vh) translateX(-20px) rotate(-8deg); }
+  }
+  .confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 16px;
+    z-index: 3;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+  }
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0.9; }
+  }
+  footer {
+    margin-top: 40px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="balloons" id="balloons"></div>
+
+<div class="container">
+  <h1>🎂 Happy Birthday, <span class="name">Stepan</span>! 🎂</h1>
+  <p class="subtitle">Wishing you an awesome day filled with joy, cake, and good vibes!</p>
+  <div class="cake" id="cake" title="Click me!">🎉🎈🥳</div>
+  <p class="hint">(click for more confetti)</p>
+  <footer>Made with ❤️ for Stepan's birthday</footer>
+</div>
+
+<script>
+  // Floating balloons
+  const balloonColors = ['#ff6b9d', '#c06fdb', '#ffd93d', '#6bc7ff', '#4dd0a4'];
+  const balloonsContainer = document.getElementById('balloons');
+  for (let i = 0; i < 14; i++) {
+    const b = document.createElement('div');
+    b.className = 'balloon';
+    b.style.left = Math.random() * 100 + 'vw';
+    b.style.background = balloonColors[i % balloonColors.length];
+    b.style.animationDuration = (10 + Math.random() * 8) + 's';
+    b.style.animationDelay = (Math.random() * 10) + 's';
+    b.style.width = (40 + Math.random() * 30) + 'px';
+    b.style.height = b.style.width;
+    balloonsContainer.appendChild(b);
+  }
+
+  // Confetti burst
+  function launchConfetti(count) {
+    const colors = ['#ff6b9d', '#c06fdb', '#ffd93d', '#6bc7ff', '#4dd0a4', '#ff9f43'];
+    for (let i = 0; i < count; i++) {
+      const c = document.createElement('div');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = colors[Math.floor(Math.random() * colors.length)];
+      c.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+      c.style.animationDelay = (Math.random() * 0.5) + 's';
+      c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 5000);
+    }
+  }
+
+  launchConfetti(60);
+  document.getElementById('cake').addEventListener('click', () => launchConfetti(80));
+</script>
+
+</body>
+</html>
