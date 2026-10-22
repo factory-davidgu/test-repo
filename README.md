@@ -1,5 +1,17 @@
 # test-repo
 
+## Calculator App
+
+A standalone calculator with a polished web UI lives in [`calculator/`](./calculator/index.html). Open `calculator/index.html` in a browser, or serve it locally:
+
+```bash
+cd calculator
+python3 -m http.server 8080
+```
+
+Then visit `http://localhost:8080`.
+
+
 ## Automated Code Review and Change Summaries with Droid CLI
 
 This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
