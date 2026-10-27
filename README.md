@@ -122,3 +122,5 @@ Requires a browser with WebGL support:
 ### Credits
 
 Shader inspiration from compact raymarching art techniques.
+
+This line was added as a test change for KAN-92.
