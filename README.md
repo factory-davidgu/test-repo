@@ -100,7 +100,7 @@ python3 -m http.server 8080
 npx http-server
 ```
 
-Then navigate to `http://localhost:8080`
+Then open `http://localhost:8080` in your browser.
 
 ### Technical Details
 
