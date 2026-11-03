@@ -2,7 +2,7 @@
 
 ## Automated Code Review and Change Summaries with Droid CLI
 
-This repository includes two GitHub Actions that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
+This repository includes two GitHub Actions workflows that use the [Droid CLI](https://docs.factory.ai) to automate code review and change analysis:
 
 1. **PR Review** - Automatically reviews every new pull request
 2. **Merge Summary** - Summarizes changes when merged to `main`
