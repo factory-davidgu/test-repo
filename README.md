@@ -9,7 +9,7 @@ This repository includes two GitHub Actions that use the [Droid CLI](https://doc
 
 ### PR Review Automation
 
-When a pull request is opened or updated, the workflow automatically:
+When a pull request is opened or updated, the review workflow automatically:
 1. Checks out the repository with full history
 2. Installs the Droid CLI
 3. Executes `droid exec` to perform a comprehensive code review
