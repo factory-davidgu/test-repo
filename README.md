@@ -104,7 +104,7 @@ Then navigate to `http://localhost:8080`
 
 ### Technical Details
 
-The shader implements:
+The shader implements the following rendering techniques:
 - 2D rotation matrices for animated effects
 - Raymarching through a 3D distance field
 - Fractal patterns using `fract()` and distance calculations
