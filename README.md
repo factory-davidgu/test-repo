@@ -55,7 +55,7 @@ To enable this automation, you need to configure the `FACTORY_API_KEY` secret:
 
 ### Workflow Details
 
-Both workflows can be customized to:
+Both workflows support the following customizations:
 - Change the analysis prompt
 - Adjust autonomy levels with `--auto` flags
 - Enable different tools or models
