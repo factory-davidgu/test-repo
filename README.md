@@ -113,7 +113,7 @@ The shader implements:
 
 ### Browser Compatibility
 
-Requires a browser with WebGL support:
+The landing page requires a browser with WebGL support:
 - Chrome/Edge (recommended)
 - Firefox
 - Safari
