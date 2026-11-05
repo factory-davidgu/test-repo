@@ -88,7 +88,7 @@ This repository contains a stunning landing page featuring a WebGL raymarching s
 
 ### Getting Started
 
-Simply open `index.html` in a modern web browser that supports WebGL.
+Open `index.html` in a modern WebGL-capable browser to view the landing page.
 
 Or run a local server:
 
